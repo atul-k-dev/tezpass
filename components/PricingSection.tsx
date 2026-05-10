@@ -97,7 +97,7 @@ function PlanCard({
   badge,
 }: PlanCardProps) {
   return (
-    <div className="bg-muted rounded-4xl p-6 flex flex-col gap-6 border border-fg/5 hover:border-primary/20 transition-all duration-300">
+    <div className="bg-muted rounded-3xl p-6 flex flex-col gap-6  hover:border-primary/20 transition-all duration-300">
       {/* Header */}
       <div>
         <div className="flex justify-between items-start mb-2">
@@ -122,7 +122,7 @@ function PlanCard({
       </div>
 
       {/* Feature list */}
-      <div className={`bg-bg/50 backdrop-blur-sm rounded-3xl p-5 border border-fg/5 shadow-sm`}>
+      <div className={`bg-bg rounded-3xl p-5`}>
         <ul className="flex flex-col gap-4">
           {features.map((f) => (
             <FeatureItem key={f.label} label={f.label} available={f.available} />
@@ -147,7 +147,7 @@ function PlanCard({
 
 export default function PricingSection() {
   return (
-    <section className="py-24 px-4 md:px-16" id="pricing">
+    <section className="py-24 px-4 md:px-6" id="pricing">
       {/* Section header */}
       <div className="text-center mb-16 max-w-3xl mx-auto">
         <div className="inline-block px-4 py-1.5 rounded-full bg-primary/5 text-primary text-xs font-bold uppercase tracking-widest mb-6">
@@ -160,7 +160,7 @@ export default function PricingSection() {
       </div>
 
       {/* Cards grid */}
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-4">
         {plans.map((plan) => (
           <PlanCard key={plan.name} {...plan} />
         ))}
