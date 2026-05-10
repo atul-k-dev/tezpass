@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bg: var(--bg);
+  --color-fg: var(--fg);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-primary-fg: var(--primary-fg);
+  --color-muted: var(--muted);
+  --color-muted-fg: var(--muted-fg);
+  --color-border: var(--border);
+  --color-hover: var(--hover);
+  --color-accent: var(--accent);
+}
+
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+}
+
+
+:root {
+ --bg:#f8f8f8; 
+ --fg:#252525;
+ --card: #cbced2;
+ --muted: #edebe0;
+ --muted-fg: #3d3d3d; 
+ --border: #ffffff;
+ --hover: #e0e3ed;
+ --primary: #000000;
+ --primary-fg: #ffffff;
+ --accent: #FF4C00;
+}
+
+
+  .logo{
+    width:46px;
+    height:46px;
+  }
+
+  .reveal{
+    animation: revealDown 1.2s cubic-bezier(0.77,0,0.175,1) forwards;
+    transform-origin: top;
+  }
+
+  @keyframes revealDown{
+    from{
+      clip-path: inset(0 0 100% 0);
+    }
+    to{
+      clip-path: inset(0 0 0% 0);
+    }
+  }
+
+
+::-webkit-scrollbar{
+  display: none;
+}
