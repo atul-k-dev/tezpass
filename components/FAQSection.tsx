@@ -2,6 +2,16 @@
 
 import { useState } from "react";
 
+/* ---------------------------------------------------------------------------
+ * FAQSection
+ * ---------------------------------------------------------------------------
+ * Collapsible FAQ accordion with two-column layout.
+ *
+ *  Desktop (md+): Left col = "FAQ" title + button, Right col = accordion.
+ *  Mobile (<md):  Single column — title on top, accordion below.
+ *    Font sizes and spacing scaled for comfortable mobile reading.
+ * --------------------------------------------------------------------------- */
+
 type FAQItem = {
   question: string;
   answer: string;
@@ -45,17 +55,17 @@ function AccordionItem({ question, answer }: FAQItem) {
 
   return (
     <div>
-      <div className="border-t border-[#252525]/15 py-5">
+      <div className="border-t border-[#252525]/15 py-4 sm:py-5">
         <button
-          className="w-full flex items-center justify-between gap-4 text-left group"
+          className="w-full flex items-center justify-between gap-3 sm:gap-4 text-left group"
           onClick={() => setOpen((prev) => !prev)}
           aria-expanded={open}
         >
-          <span className="text-xl md:text-2xl font-medium text-fg leading-snug">
+          <span className="text-lg sm:text-xl md:text-2xl font-medium text-fg leading-snug">
             {question}
           </span>
           <span
-            className={`flex-shrink-0 w-9 h-9 rounded-full border border-fg/40 flex items-center justify-center text-fg/70 text-lg font-light transition-transform duration-300 ${
+            className={`flex-shrink-0 w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-fg/40 flex items-center justify-center text-fg/70 text-lg font-light transition-transform duration-300 ${
               open ? "rotate-45" : "rotate-0"
             }`}
           >
@@ -65,10 +75,10 @@ function AccordionItem({ question, answer }: FAQItem) {
 
         <div
           className={`overflow-hidden transition-all duration-300 ${
-            open ? "max-h-96 opacity-100 mt-4" : "max-h-0 opacity-0"
+            open ? "max-h-96 opacity-100 mt-3 sm:mt-4" : "max-h-0 opacity-0"
           }`}
         >
-          <p className="text-base text-[#3d3d3d]/80 leading-relaxed font-medium pr-14">
+          <p className="text-sm sm:text-base text-[#3d3d3d]/80 leading-relaxed font-medium pr-8 sm:pr-14">
             {answer}
           </p>
         </div>
@@ -79,11 +89,11 @@ function AccordionItem({ question, answer }: FAQItem) {
 
 export default function FAQSection() {
   return (
-    <section className="bg-bg py-20 pb-0 px-4 md:px-16">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_1.6fr] gap-12 md:gap-20">
-        {/* Left column */}
-        <div className="flex flex-col gap-6 md:pt-2">
-          <h2 className="text-6xl md:text-8xl font-bold text-fg leading-none tracking-tight">
+    <section className="bg-bg py-14 sm:py-20 pb-0 px-4 sm:px-8 md:px-16">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_1.6fr] gap-8 sm:gap-12 md:gap-20">
+        {/* Left column — title + button */}
+        <div className="flex flex-col gap-4 sm:gap-6 md:pt-2">
+          <h2 className="text-5xl sm:text-6xl md:text-8xl font-bold text-fg leading-none tracking-tight">
             FAQ
           </h2>
           <button className="rounded-full border border-fg px-4 py-1.5 text-xs font-medium text-fg w-max hover:bg-hover transition-colors uppercase tracking-wide">
@@ -91,7 +101,7 @@ export default function FAQSection() {
           </button>
         </div>
 
-        {/* Right column — accordion */}
+        {/* Right column — accordion items */}
         <div>
           {faqs.map((item) => (
             <AccordionItem

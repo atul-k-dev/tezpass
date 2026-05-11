@@ -2,6 +2,17 @@
 
 import React from "react";
 
+/* ---------------------------------------------------------------------------
+ * Footer
+ * ---------------------------------------------------------------------------
+ * Site-wide footer with 3D extruded "TezPass" title, CTA, link columns, and
+ * bottom bar with copyright + legal links.
+ *
+ *  Desktop (lg+): Side-by-side — CTA left, 4 link columns right.
+ *  Tablet (md):   CTA left, link columns wrap in 2×2 grid.
+ *  Mobile (<md):  Full stack — CTA on top, link columns below in 2×2 grid.
+ * --------------------------------------------------------------------------- */
+
 function FacebookIcon() {
   return (
     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -36,11 +47,12 @@ function LinkedInIcon() {
 
 export default function Footer() {
   return (
-    <footer className="w-full text-white overflow-hidden font-sans">
-      {/* 3D Title Section */}
-      <div className="relative w-full z-20  -bottom-[8vw] h-[30vw] md:h-[20vw] flex justify-center items-end overflow-hidden ">
+    <footer className="w-full text-white overflow-hidden font-sans mt-20 md:mt-0">
+
+      {/* ── 3D Title Section ──────────────────────────────────────────── */}
+      <div className="relative w-full z-20 -bottom-[8vw] h-[25vw] sm:h-[22vw] md:h-[20vw] hidden md:flex justify-center items-end overflow-hidden">
         <h1
-          className="absolute bottom-[3vw] text-[18vw]   font-black tracking-tighter leading-none select-none"
+          className="absolute bottom-[3vw] text-[15vw] sm:text-[16vw] md:text-[18vw] font-black tracking-tighter leading-none select-none"
           style={{
             color: "#FF4C00",
             WebkitTextStroke: "1px #FA4A00",
@@ -66,34 +78,24 @@ export default function Footer() {
         >
           TezPass
         </h1>
-        {/* Gradient blend
-        <div className="absolute bottom-0 left-0 w-full h-1/2 bg-gradient-to-t from-[#FF4C00] to-transparent z-10"></div> */}
       </div>
 
-      {/* Main Content Area */}
-      <div className="relative z-5 px-6 md:px-12 lg:px-20 pt-10 pb-10 bg-[#FF4C00] rounded-t-4xl overflow-hidden">
-        <div className="flex flex-col lg:flex-row justify-between gap-16 lg:gap-8 ">
+      {/* ── Main Content Area ────────────────────────────────────────── */}
+      <div className="relative z-5 px-4 sm:px-6 md:px-12 lg:px-20 pt-8 sm:pt-10 pb-8 sm:pb-10 bg-[#FF4C00] rounded-t-3xl sm:rounded-t-4xl overflow-hidden">
+        <div className="flex flex-col lg:flex-row justify-between gap-10 sm:gap-12 lg:gap-8">
 
-          {/* Left Column */}
+          {/* Left Column — Social + CTA */}
           <div className="flex flex-col max-w-xl">
             {/* Social Icons */}
-            <div className="flex items-center gap-5 mb-14">
-              <a href="#" className="hover:opacity-80 transition-opacity">
-                <FacebookIcon />
-              </a>
-              <a href="#" className="hover:opacity-80 transition-opacity">
-                <InstagramIcon />
-              </a>
-              <a href="#" className="hover:opacity-80 transition-opacity">
-                <XIcon />
-              </a>
-              <a href="#" className="hover:opacity-80 transition-opacity">
-                <LinkedInIcon />
-              </a>
+            <div className="flex items-center gap-4 sm:gap-5 mb-8 sm:mb-14">
+              <a href="#" className="hover:opacity-80 transition-opacity"><FacebookIcon /></a>
+              <a href="#" className="hover:opacity-80 transition-opacity"><InstagramIcon /></a>
+              <a href="#" className="hover:opacity-80 transition-opacity"><XIcon /></a>
+              <a href="#" className="hover:opacity-80 transition-opacity"><LinkedInIcon /></a>
             </div>
 
-            {/* Huge Heading */}
-            <h2 className="text-4xl md:text-[3.5rem]  font-black leading-[1] tracking-tight mb-10">
+            {/* Heading */}
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[3.5rem] font-black leading-[1.05] tracking-tight mb-8 sm:mb-10">
               READY TO TAKE<br />
               CONTROL OF YOUR<br />
               FINANCIAL FUTURE
@@ -101,66 +103,61 @@ export default function Footer() {
 
             {/* CTA Button */}
             <div>
-              <button className="bg-white text-[#FF4C00] font-bold text-[15px] px-8 py-3.5 rounded-full hover:bg-gray-100 transition-colors tracking-wide">
+              <button className="bg-white text-[#FF4C00] font-bold text-sm sm:text-[15px] px-6 sm:px-8 py-3 sm:py-3.5 rounded-full hover:bg-gray-100 transition-colors tracking-wide">
                 GET STARTED
               </button>
             </div>
           </div>
 
-          {/* Right Column - Links */}
-          <div className="flex flex-wrap md:flex-nowrap gap-12 md:gap-16 lg:gap-24 pt-4 lg:pt-20">
+          {/* Right Column — Link grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 md:gap-12 lg:gap-16 pt-0 lg:pt-20">
             {/* Features */}
-            <div className="flex flex-col gap-5 min-w-[120px]">
-              <h3 className="font-bold text-lg mb-1">Features</h3>
-              <a href="#" className="text-white hover:opacity-80 text-[15px] font-medium transition-opacity">Analytics</a>
-              <a href="#" className="text-white hover:opacity-80 text-[15px] font-medium transition-opacity">Collaboration</a>
-              <a href="#" className="text-white hover:opacity-80 text-[15px] font-medium transition-opacity">Data Management</a>
-              <a href="#" className="text-white hover:opacity-80 text-[15px] font-medium transition-opacity">Integrations</a>
-              <a href="#" className="text-white hover:opacity-80 text-[15px] font-medium transition-opacity">Security</a>
+            <div className="flex flex-col gap-3 sm:gap-5 min-w-0">
+              <h3 className="font-bold text-base sm:text-lg mb-0 sm:mb-1">Features</h3>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Analytics</a>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Collaboration</a>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Data Management</a>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Integrations</a>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Security</a>
             </div>
 
             {/* Company */}
-            <div className="flex flex-col gap-5 min-w-[120px]">
-              <h3 className="font-bold text-lg mb-1">Company</h3>
-              <a href="#" className="text-white hover:opacity-80 text-[15px] font-medium transition-opacity">About us</a>
-              <a href="#" className="text-white hover:opacity-80 text-[15px] font-medium transition-opacity">Blog</a>
-              <a href="#" className="text-white hover:opacity-80 text-[15px] font-medium transition-opacity">Careers</a>
-              <a href="#" className="text-white hover:opacity-80 text-[15px] font-medium transition-opacity">Cookie Policy</a>
+            <div className="flex flex-col gap-3 sm:gap-5 min-w-0">
+              <h3 className="font-bold text-base sm:text-lg mb-0 sm:mb-1">Company</h3>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">About us</a>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Blog</a>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Careers</a>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Cookie Policy</a>
             </div>
 
             {/* Resource */}
-            <div className="flex flex-col gap-5 min-w-[120px]">
-              <h3 className="font-bold text-lg mb-1">Resource</h3>
-              <a href="#" className="text-white hover:opacity-80 text-[15px] font-medium transition-opacity">Customers</a>
-              <a href="#" className="text-white hover:opacity-80 text-[15px] font-medium transition-opacity">Strategic</a>
-              <a href="#" className="text-white hover:opacity-80 text-[15px] font-medium transition-opacity">E books & Guides</a>
-              <a href="#" className="text-white hover:opacity-80 text-[15px] font-medium transition-opacity">Webinar</a>
+            <div className="flex flex-col gap-3 sm:gap-5 min-w-0">
+              <h3 className="font-bold text-base sm:text-lg mb-0 sm:mb-1">Resource</h3>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Customers</a>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Strategic</a>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">E books & Guides</a>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Webinar</a>
             </div>
 
             {/* Support */}
-            <div className="flex flex-col gap-5 min-w-[120px]">
-              <h3 className="font-bold text-lg mb-1">Support</h3>
-              <a href="#" className="text-white hover:opacity-80 text-[15px] font-medium transition-opacity">Help Center</a>
-              <a href="#" className="text-white hover:opacity-80 text-[15px] font-medium transition-opacity">Contact</a>
+            <div className="flex flex-col gap-3 sm:gap-5 min-w-0">
+              <h3 className="font-bold text-base sm:text-lg mb-0 sm:mb-1">Support</h3>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Help Center</a>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Contact</a>
             </div>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="mt-24 pt-6 flex flex-col md:flex-row justify-between items-center text-[15px] font-medium gap-4">
+        {/* ── Bottom Bar ─────────────────────────────────────────────── */}
+        <div className="mt-12 sm:mt-16 md:mt-24 pt-4 sm:pt-6 flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm md:text-[15px] font-medium gap-3 sm:gap-4">
           <div className="opacity-90">© 2024 finguard</div>
           <div className="opacity-90 md:absolute md:left-1/2 md:-translate-x-1/2">All Rights Reserved.</div>
-          <div className="flex gap-6 opacity-90">
+          <div className="flex gap-4 sm:gap-6 opacity-90">
             <a href="#" className="hover:underline">Terms of Service</a>
             <a href="#" className="hover:underline">Privacy Policy</a>
           </div>
         </div>
-
-
       </div>
-
-
     </footer>
   );
 }
-
