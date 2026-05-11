@@ -78,7 +78,7 @@ export default function WhatWeDoSection() {
       {/* ── Horizontal scroll carousel ───────────────────────────────── */}
       {/* On mobile: starts at left edge with padding.
           On desktop: offset to the right via left-70 for the peek effect. */}
-      <div className="w-full relative left-0 md:left-70 -top-2 md:-top-5 flex overflow-x-auto gap-3 sm:gap-4 pb-4 pt-4 snap-x snap-mandatory relative z-10">
+      <div className="w-[83%] relative left-0 md:left-[20%] -top-2 md:-top-5 flex overflow-x-auto gap-3 sm:gap-4 pb-4 pt-4 snap-x snap-mandatory relative z-10">
 
         {/* Card 1 — Smart EV Profiles */}
         <div className="snap-start min-w-[280px] w-[280px] sm:min-w-[340px] sm:w-[340px] md:min-w-[450px] md:w-[450px] bg-muted rounded-3xl sm:rounded-4xl p-4 sm:p-6 md:p-8 flex flex-col relative">

@@ -90,7 +90,7 @@ function AccordionItem({ question, answer }: FAQItem) {
 export default function FAQSection() {
   return (
     <section className="bg-bg py-14 sm:py-20 pb-0 px-4 sm:px-8 md:px-16">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_1.6fr] gap-8 sm:gap-12 md:gap-20">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_1.6fr] gap-8 sm:gap-12 md:gap-20">
         {/* Left column — title + button */}
         <div className="flex flex-col gap-4 sm:gap-6 md:pt-2">
           <h2 className="text-5xl sm:text-6xl md:text-8xl font-bold text-fg leading-none tracking-tight">

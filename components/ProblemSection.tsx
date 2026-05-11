@@ -9,7 +9,7 @@
 
 export default function ProblemSection() {
   return (
-    <section className="grid grid-cols-1 md:grid-cols-3 gap-1 w-full mt-1 md:mt-[27px] mb-1">
+    <section className="grid grid-cols-1 md:grid-cols-3 gap-1 w-full mt-1 mb-1">
 
       {/* ── Main problem statement card (spans 2 cols on desktop) ─────── */}
       <div className="md:col-span-2 relative bg-muted p-6 sm:p-8 md:p-12 flex flex-col justify-between min-h-[320px] sm:min-h-[400px] md:rounded-br-4xl overflow-hidden">

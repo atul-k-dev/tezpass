@@ -98,12 +98,12 @@ export default function Footer() {
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[3.5rem] font-black leading-[1.05] tracking-tight mb-8 sm:mb-10">
               READY TO TAKE<br />
               CONTROL OF YOUR<br />
-              FINANCIAL FUTURE
+              EV CHARGING
             </h2>
 
             {/* CTA Button */}
             <div>
-              <button className="bg-white text-[#FF4C00] font-bold text-sm sm:text-[15px] px-6 sm:px-8 py-3 sm:py-3.5 rounded-full hover:bg-gray-100 transition-colors tracking-wide">
+              <button className="bg-white text-[#FF4C00] font-bold text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-3.5 rounded-full hover:bg-gray-100 transition-colors tracking-wide">
                 GET STARTED
               </button>
             </div>
@@ -113,44 +113,44 @@ export default function Footer() {
           <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 md:gap-12 lg:gap-16 pt-0 lg:pt-20">
             {/* Features */}
             <div className="flex flex-col gap-3 sm:gap-5 min-w-0">
-              <h3 className="font-bold text-base sm:text-lg mb-0 sm:mb-1">Features</h3>
-              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Analytics</a>
-              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Collaboration</a>
-              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Data Management</a>
-              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Integrations</a>
-              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Security</a>
+              <h3 className="font-bold text-base sm:text-xl mb-0 sm:mb-1">Features</h3>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">Analytics</a>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">Collaboration</a>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">Data Management</a>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">Integrations</a>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">Security</a>
             </div>
 
             {/* Company */}
             <div className="flex flex-col gap-3 sm:gap-5 min-w-0">
-              <h3 className="font-bold text-base sm:text-lg mb-0 sm:mb-1">Company</h3>
-              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">About us</a>
-              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Blog</a>
-              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Careers</a>
-              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Cookie Policy</a>
+              <h3 className="font-bold text-base sm:text-xl mb-0 sm:mb-1">Company</h3>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">About us</a>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">Blog</a>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">Careers</a>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">Cookie Policy</a>
             </div>
 
             {/* Resource */}
             <div className="flex flex-col gap-3 sm:gap-5 min-w-0">
-              <h3 className="font-bold text-base sm:text-lg mb-0 sm:mb-1">Resource</h3>
-              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Customers</a>
-              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Strategic</a>
-              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">E books & Guides</a>
-              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Webinar</a>
+              <h3 className="font-bold text-base sm:text-xl mb-0 sm:mb-1">Resource</h3>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">Customers</a>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">Strategic</a>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">E books & Guides</a>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">Webinar</a>
             </div>
 
             {/* Support */}
             <div className="flex flex-col gap-3 sm:gap-5 min-w-0">
-              <h3 className="font-bold text-base sm:text-lg mb-0 sm:mb-1">Support</h3>
-              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Help Center</a>
-              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-[15px] font-medium transition-opacity">Contact</a>
+              <h3 className="font-bold text-base sm:text-xl mb-0 sm:mb-1">Support</h3>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">Help Center</a>
+              <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">Contact</a>
             </div>
           </div>
         </div>
 
         {/* ── Bottom Bar ─────────────────────────────────────────────── */}
         <div className="mt-12 sm:mt-16 md:mt-24 pt-4 sm:pt-6 flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm md:text-[15px] font-medium gap-3 sm:gap-4">
-          <div className="opacity-90">© 2024 finguard</div>
+          <div className="opacity-90">© 2024 TezPass</div>
           <div className="opacity-90 md:absolute md:left-1/2 md:-translate-x-1/2">All Rights Reserved.</div>
           <div className="flex gap-4 sm:gap-6 opacity-90">
             <a href="#" className="hover:underline">Terms of Service</a>

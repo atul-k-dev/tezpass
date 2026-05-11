@@ -147,7 +147,7 @@ function PlanCard({
 
       {/* CTA */}
       <button
-        className={`w-full py-3.5 sm:py-4 rounded-full font-bold text-sm transition-all duration-300 shadow-lg shadow-primary/10 active:scale-[0.98] ${buttonClass}`}
+        className={`w-full py-3.5 sm:py-4 rounded-full font-bold text-sm transition-all duration-300 active:scale-[0.98] ${buttonClass}`}
       >
         Select Plan
       </button>
