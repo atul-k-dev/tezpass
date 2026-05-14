@@ -139,7 +139,7 @@ export default function ProblemSection() {
     cardsRef.current.forEach(card => {
       if (!card) return;
       card.addEventListener("mouseenter", () => {
-        gsap.to(card, { y: -8, scale: 1.01, duration: 0.4, ease: "power2.out", boxShadow: "0 20px 40px rgba(0,0,0,0.1)" });
+        gsap.to(card, { y: -4, scale: 1, duration: 0.4, ease: "power2.out", boxShadow: "0 1px 3px rgba(64, 64, 64, 0.6)" });
       });
       card.addEventListener("mouseleave", () => {
         gsap.to(card, { y: 0, scale: 1, duration: 0.4, ease: "power2.out", boxShadow: "none" });
@@ -321,7 +321,7 @@ export default function ProblemSection() {
             {/* Background Image */}
             <img
               ref={mapImgRef}
-              src="/charger2.png"
+              src="/card/unimap.png"
               alt="Universal Map"
               className="object-cover w-full h-[120%] z-0 absolute top-[-10%]"
             />

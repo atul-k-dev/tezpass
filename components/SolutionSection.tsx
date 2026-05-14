@@ -290,9 +290,9 @@ export default function SolutionSection() {
             {/* Left: Image */}
             <div className="w-full md:w-1/2 relative min-h-[250px] md:min-h-full border-b-2 md:border-b-0 md:border-r-2 border-primary/40 bg-muted">
               <img 
-                src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=2564&auto=format&fit=crop" 
+                src="/card/step1.png" 
                 alt="Locate and Navigate" 
-                className="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-80" 
+                className="absolute inset-0 w-full h-full object-cover  mix-blend-luminosity opacity-80" 
               />
             </div>
             
@@ -328,7 +328,7 @@ export default function SolutionSection() {
             {/* Right: Image (Top on Mobile) */}
             <div className="w-full md:w-1/2 relative min-h-[250px] md:min-h-full border-b-2 md:border-b-0 md:border-l-2 border-primary/40 bg-muted">
               <img 
-                src="https://images.unsplash.com/photo-1550684848-fac1c5b4e853?q=80&w=2070&auto=format&fit=crop" 
+                src="/card/step2.png" 
                 alt="Your Favorite CPO App" 
                 className="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-80" 
               />
@@ -366,7 +366,7 @@ export default function SolutionSection() {
             {/* Left: Image */}
             <div className="w-full md:w-1/2 relative min-h-[250px] md:min-h-full border-b-2 md:border-b-0 md:border-r-2 border-primary/40 bg-muted">
               <img 
-                src="https://images.unsplash.com/photo-1614729939124-032f0b56c9ce?q=80&w=2000&auto=format&fit=crop" 
+                src="/card/step3.png" 
                 alt="Bill on TezPass" 
                 className="absolute inset-0 w-full h-full object-cover mix-blend-luminosity opacity-80" 
               />
@@ -415,9 +415,9 @@ export default function SolutionSection() {
             {/* Top Featured Review Image (Spans 1 column) */}
             <div className="col-span-1 border-2 border-primary/40 rounded-md overflow-hidden min-h-[300px] md:min-h-[450px] max-h-[500px]">
               <img 
-                src="https://images.unsplash.com/photo-1539571696357-5a69c17a67c6?q=80&w=1000&auto=format&fit=crop" 
+                src="/card/app.png" 
                 alt="Marcus Chen" 
-                className="w-full h-full object-cover mix-blend-luminosity opacity-80" 
+                className="w-full h-full object-cover mix-blend-luminosity " 
               />
             </div>
 
