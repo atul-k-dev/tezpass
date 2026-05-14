@@ -22,14 +22,12 @@ import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
-import WhatWeDoSection from "@/components/WhatWeDoSection";
-import PricingSection from "@/components/PricingSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <div className="w-full h-screen bg-bg text-fg font-sans overflow-y-auto relative">
+    <div className="w-full min-h-screen bg-bg text-fg font-sans relative">
       {/* ── Global fixed header ──────────────────────────────────────── */}
       <Header />
 
@@ -37,8 +35,6 @@ export default function Home() {
       <HeroSection />
       <ProblemSection />
       <SolutionSection />
-      <WhatWeDoSection />
-      <PricingSection />
       <FAQSection />
       <Footer />
     </div>

@@ -1,6 +1,8 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
+import { SlideUp, FadeIn, StaggerContainer, StaggerItem } from "./ScrollAnimations";
 
 /* ---------------------------------------------------------------------------
  * Footer
@@ -47,71 +49,48 @@ function LinkedInIcon() {
 
 export default function Footer() {
   return (
-    <footer className="w-full text-white overflow-hidden font-sans mt-20 md:mt-0">
+    <footer className="w-full bg-bg relative  text-white overflow-hidden font-sans pt-20 md:mt-0">
 
-      {/* ── 3D Title Section ──────────────────────────────────────────── */}
-      <div className="relative w-full z-20 -bottom-[8vw] h-[25vw] sm:h-[22vw] md:h-[20vw] hidden md:flex justify-center items-end overflow-hidden">
-        <h1
-          className="absolute bottom-[3vw] text-[15vw] sm:text-[16vw] md:text-[18vw] font-black tracking-tighter leading-none select-none"
-          style={{
-            color: "#FF4C00",
-            WebkitTextStroke: "1px #FA4A00",
-            textShadow: `
-              0 1px 0 #D83600, 
-              0 2px 0 #D83600, 
-              0 3px 0 #D83600, 
-              0 4px 0 #D83600, 
-              0 5px 0 #D83600, 
-              0 6px 0 #D83600, 
-              0 7px 0 #D83600, 
-              0 8px 0 #D83600, 
-              0 9px 0 #D83600, 
-              0 10px 0 #D83600, 
-              0 11px 0 #D83600, 
-              0 12px 0 #D83600, 
-              0 13px 0 #D83600, 
-              0 14px 0 #D83600, 
-              0 15px 0 #D83600, 
-              0 25px 30px rgba(0,0,0,0.3)
-            `,
-          }}
-        >
-          TezPass
-        </h1>
-      </div>
 
       {/* ── Main Content Area ────────────────────────────────────────── */}
-      <div className="relative z-5 px-4 sm:px-6 md:px-12 lg:px-20 pt-8 sm:pt-10 pb-8 sm:pb-10 bg-[#FF4C00] rounded-t-3xl sm:rounded-t-4xl overflow-hidden">
+      <div className="relative z-5 px-4 sm:px-6 md:px-12 lg:px-20 pt-8 sm:pt-10 pb-8 sm:pb-10 bg-[#FF4C00] rounded-t-4xl sm:rounded-t-4xl overflow-hidden">
         <div className="flex flex-col lg:flex-row justify-between gap-10 sm:gap-12 lg:gap-8">
 
           {/* Left Column — Social + CTA */}
           <div className="flex flex-col max-w-xl">
             {/* Social Icons */}
+          <FadeIn>
             <div className="flex items-center gap-4 sm:gap-5 mb-8 sm:mb-14">
               <a href="#" className="hover:opacity-80 transition-opacity"><FacebookIcon /></a>
               <a href="#" className="hover:opacity-80 transition-opacity"><InstagramIcon /></a>
               <a href="#" className="hover:opacity-80 transition-opacity"><XIcon /></a>
               <a href="#" className="hover:opacity-80 transition-opacity"><LinkedInIcon /></a>
             </div>
+          </FadeIn>
 
             {/* Heading */}
+          <SlideUp delay={0.1}>
             <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[3.5rem] font-black leading-[1.05] tracking-tight mb-8 sm:mb-10">
               READY TO TAKE<br />
               CONTROL OF YOUR<br />
               EV CHARGING
             </h2>
+          </SlideUp>
 
             {/* CTA Button */}
+            <FadeIn delay={0.2}>
             <div>
               <button className="bg-white text-[#FF4C00] font-bold text-sm sm:text-base px-6 sm:px-8 py-3 sm:py-3.5 rounded-full hover:bg-gray-100 transition-colors tracking-wide">
                 GET STARTED
               </button>
             </div>
+            </FadeIn>
           </div>
 
           {/* Right Column — Link grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 md:gap-12 lg:gap-16 pt-0 lg:pt-20">
+          <StaggerContainer className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-8 sm:gap-10 md:gap-12 lg:gap-16 pt-0 lg:pt-20">
             {/* Features */}
+            <StaggerItem>
             <div className="flex flex-col gap-3 sm:gap-5 min-w-0">
               <h3 className="font-bold text-base sm:text-xl mb-0 sm:mb-1">Features</h3>
               <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">Analytics</a>
@@ -120,8 +99,10 @@ export default function Footer() {
               <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">Integrations</a>
               <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">Security</a>
             </div>
+            </StaggerItem>
 
             {/* Company */}
+            <StaggerItem>
             <div className="flex flex-col gap-3 sm:gap-5 min-w-0">
               <h3 className="font-bold text-base sm:text-xl mb-0 sm:mb-1">Company</h3>
               <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">About us</a>
@@ -129,8 +110,10 @@ export default function Footer() {
               <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">Careers</a>
               <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">Cookie Policy</a>
             </div>
+            </StaggerItem>
 
             {/* Resource */}
+            <StaggerItem>
             <div className="flex flex-col gap-3 sm:gap-5 min-w-0">
               <h3 className="font-bold text-base sm:text-xl mb-0 sm:mb-1">Resource</h3>
               <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">Customers</a>
@@ -138,17 +121,21 @@ export default function Footer() {
               <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">E books & Guides</a>
               <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">Webinar</a>
             </div>
+            </StaggerItem>
 
             {/* Support */}
+            <StaggerItem>
             <div className="flex flex-col gap-3 sm:gap-5 min-w-0">
               <h3 className="font-bold text-base sm:text-xl mb-0 sm:mb-1">Support</h3>
               <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">Help Center</a>
               <a href="#" className="text-white hover:opacity-80 text-sm sm:text-base font-medium transition-opacity">Contact</a>
             </div>
-          </div>
+            </StaggerItem>
+          </StaggerContainer>
         </div>
 
         {/* ── Bottom Bar ─────────────────────────────────────────────── */}
+        <SlideUp delay={0.3}>
         <div className="mt-12 sm:mt-16 md:mt-24 pt-4 sm:pt-6 flex flex-col sm:flex-row justify-between items-center text-xs sm:text-sm md:text-[15px] font-medium gap-3 sm:gap-4">
           <div className="opacity-90">© 2024 TezPass</div>
           <div className="opacity-90 md:absolute md:left-1/2 md:-translate-x-1/2">All Rights Reserved.</div>
@@ -157,6 +144,7 @@ export default function Footer() {
             <a href="#" className="hover:underline">Privacy Policy</a>
           </div>
         </div>
+        </SlideUp>
       </div>
     </footer>
   );

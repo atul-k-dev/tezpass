@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
+import { SlideUp, SlideInLeft, StaggerContainer, StaggerItem } from "./ScrollAnimations";
 
 /* ---------------------------------------------------------------------------
  * FAQSection
@@ -50,11 +52,16 @@ const faqs: FAQItem[] = [
   },
 ];
 
-function AccordionItem({ question, answer }: FAQItem) {
+function AccordionItem({ question, answer, index }: FAQItem & { index: number }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <div>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, delay: index * 0.08, ease: [0.25, 0.46, 0.45, 0.94] }}
+      viewport={{ once: true, amount: 0.3 }}
+    >
       <div className="border-t border-[#252525]/15 py-4 sm:py-5">
         <button
           className="w-full flex items-center justify-between gap-3 sm:gap-4 text-left group"
@@ -73,41 +80,53 @@ function AccordionItem({ question, answer }: FAQItem) {
           </span>
         </button>
 
-        <div
-          className={`overflow-hidden transition-all duration-300 ${
-            open ? "max-h-96 opacity-100 mt-3 sm:mt-4" : "max-h-0 opacity-0"
-          }`}
+        <motion.div
+          initial={false}
+          animate={{
+            height: open ? "auto" : 0,
+            opacity: open ? 1 : 0,
+            marginTop: open ? 12 : 0,
+          }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="overflow-hidden"
         >
           <p className="text-sm sm:text-base text-[#3d3d3d]/80 leading-relaxed font-medium pr-8 sm:pr-14">
             {answer}
           </p>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
 export default function FAQSection() {
   return (
-    <section className="bg-bg py-14 sm:py-20 pb-0 px-4 sm:px-8 md:px-16">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-[1fr_1.6fr] gap-8 sm:gap-12 md:gap-20">
+    <section className="bg-bg py-14 sm:pb-20 pb-0 px-4 sm:px-8 md:px-16 relative z-1 bg-bg">
+      <div className="max-w-[1550px] mx-auto grid grid-cols-1 md:grid-cols-[1fr_1.6fr] gap-8 sm:gap-12 md:gap-20">
         {/* Left column — title + button */}
-        <div className="flex flex-col gap-4 sm:gap-6 md:pt-2">
-          <h2 className="text-5xl sm:text-6xl md:text-8xl font-bold text-fg leading-none tracking-tight">
-            FAQ
-          </h2>
-          <button className="rounded-full border border-fg px-4 py-1.5 text-xs font-medium text-fg w-max hover:bg-hover transition-colors uppercase tracking-wide">
-            All Questions
-          </button>
-        </div>
+        <SlideInLeft>
+          <div className="flex flex-col gap-4 sm:gap-6 md:pt-2">
+            <h2 className="text-fg text-[4.5rem] sm:text-[6rem] md:text-[7rem] lg:text-[7.5rem] font-medium tracking-tighter leading-[0.9]">
+              Faqs
+            </h2>
+            <motion.button
+              className="rounded-full border border-fg px-4 py-1.5 text-xs font-medium text-fg w-max hover:bg-hover transition-colors uppercase tracking-wide"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              All Questions
+            </motion.button>
+          </div>
+        </SlideInLeft>
 
         {/* Right column — accordion items */}
         <div>
-          {faqs.map((item) => (
+          {faqs.map((item, index) => (
             <AccordionItem
               key={item.question}
               question={item.question}
               answer={item.answer}
+              index={index}
             />
           ))}
           {/* Bottom divider */}
